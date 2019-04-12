@@ -1,0 +1,17 @@
+img {
+  border-radius: 8px;
+}
+
+.category-hsp-news-feed #navigation-bar .navigation-toggle {
+  display: none;
+}
+
+.category-hsp-news-feed, .category-hsp-library, .category-products {
+  th.posts, th.activity, td.posts, td.activity {
+    display: none;
+  }
+}
+
+.list-controls .combo-box .combo-box-header, .nav-pills>li>a, .list-controls .btn {
+  border-radius: 8px;
+}
