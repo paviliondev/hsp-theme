@@ -1,1 +1,36 @@
+<script type="text/discourse-plugin" version="0.8">
+  const on = require('ember-addons/ember-computed-decorators').on;
 
+  api.modifyClass('component:topic-list-item', {
+    @on('didInsertElement')
+    moveTitle() {
+      const tilesStyle = this.get('tilesStyle');
+      if (tilesStyle) {
+        Ember.run.scheduleOnce('afterRender', () => {
+          this.$('.topic-header-grid').insertAfter(this.$('.topic-thumbnail'));
+        });
+      }
+    }
+  });
+
+  const CategorySearch = Ember.Component.extend({
+    bindClassNames: [':category-search'],
+
+    didInsertElement() {
+      Ember.run.scheduleOnce('afterRender', () => {
+        this.$().parent().insertAfter($('#navigation-bar'));
+        this.$('#search-term').val('');
+      });
+    }
+  });
+
+  Discourse.register('component:category-search', CategorySearch);
+</script>
+
+<script type="text/x-handlebars" data-template-name="/connectors/category-navigation/category-search-container">
+  {{category-search}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="components/category-search">
+  {{mount-widget widget="search-menu" args=(hash formFactor="header" contextEnabled=true)}}
+</script>

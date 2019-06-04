@@ -1,0 +1,19 @@
+.topic-list .posts-map {
+  display: none;
+}
+
+ol.category-breadcrumb {
+  flex: initial;
+}
+
+.category-search-container {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 100%;
+
+  .search-header {
+    position: relative;
+    margin: 0;
+    width: 100%;
+  }
+}
