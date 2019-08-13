@@ -17,3 +17,51 @@ ol.category-breadcrumb {
     width: 100%;
   }
 }
+
+// Landing Page
+
+.homepage-categories {
+  .homepage-category {
+    width: 100%;
+  }
+}
+
+.signup {
+  text-align: center;
+  width: 100%;
+
+  .subtext {
+    width: 300px; 
+    display: inline-block;
+  }
+
+}
+
+.between-categories {
+  text-align: center;
+  width: 100%;
+
+  .subtext {
+    width: 300px;
+    display: inline-block;
+  }
+
+}
+
+.subtitle {
+  text-align: center;
+  width: 100%;
+
+  .subtext {
+    width: 300px;
+    display: inline-block;
+  }
+}
+
+html.anon {
+  body.landing {
+    .logo {
+      margin-top: 55px;
+    }
+  }
+}

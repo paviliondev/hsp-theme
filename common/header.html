@@ -1,5 +1,7 @@
 <script type="text/discourse-plugin" version="0.8">
   const on = require('ember-addons/ember-computed-decorators').on;
+  const Eyeline = require("discourse/lib/eyeline").default;
+
 
   api.modifyClass('component:topic-list-item', {
     @on('didInsertElement')
@@ -25,6 +27,25 @@
   });
 
   Discourse.register('component:category-search', CategorySearch);
+
+  api.modifyClass('component:discovery-topics-list', {
+    scrolled() {
+      const eyeline = this.eyeline;
+      console.log('eyeline', eyeline)
+      return eyeline && eyeline.update();
+    },
+
+    @on("didInsertElement")
+    _bindEyeline() {
+      const eyeline = new Eyeline(this.eyelineSelector + ":last");
+      this.set("eyeline", eyeline);
+      eyeline.on("sawBottom", () => {
+        console.log('sawBottom triggered');
+        this.send("loadMore")
+      });
+      this.bindScrolling();
+    }
+  })
 </script>
 
 <script type="text/x-handlebars" data-template-name="/connectors/category-navigation/category-search-container">
