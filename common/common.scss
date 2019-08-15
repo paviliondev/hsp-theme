@@ -270,3 +270,7 @@ html.anon {
       -webkit-hyphens: auto;
       hyphens: auto;
 }
+
+body.categories-list .cta-block {
+  display: none;
+}
