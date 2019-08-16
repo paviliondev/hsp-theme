@@ -93,9 +93,9 @@ api.reopenWidget('search-menu', {
 
     if (formFactor === 'header') {
       contents.push(this.attach('button', {
-          icon: 'search',
-          className: 'search-icon',
-          action: 'showResults'
+        icon: 'search',
+        className: 'search-icon',
+        action: 'showResults'
       }));
     }
 
@@ -119,12 +119,13 @@ api.reopenWidget('search-menu', {
 
 api.reopenWidget('search-context', {
   html(attrs, state) {
-    Ember.run.scheduleOnce('afterRender', () => {
-      console.log($('.search-context input').prop('checked'));
-      if (!$('.search-context input').prop('checked')) {
-        $('.search-context input').click();
-      }
-    })
+    if (this.parentWidget.state.formFactor === 'header') {
+      Ember.run.scheduleOnce('afterRender', () => {
+        if (!$('.search-context input').prop('checked')) {
+          $('.search-context input').click();
+        }
+      });
+    }
     return this._super(attrs, state);
   },
 });

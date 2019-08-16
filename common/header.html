@@ -31,7 +31,6 @@
   api.modifyClass('component:discovery-topics-list', {
     scrolled() {
       const eyeline = this.eyeline;
-      console.log('eyeline', eyeline)
       return eyeline && eyeline.update();
     },
 
@@ -40,7 +39,6 @@
       const eyeline = new Eyeline(this.eyelineSelector + ":last");
       this.set("eyeline", eyeline);
       eyeline.on("sawBottom", () => {
-        console.log('sawBottom triggered');
         this.send("loadMore")
       });
       this.bindScrolling();
