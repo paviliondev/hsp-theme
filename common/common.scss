@@ -20,6 +20,23 @@ img {
   display: none;
 }
 
+.logo-outlet {
+  .logo-container {
+    display: none;
+    padding-top: 60px;
+    
+    &.visible {
+      display: block;
+    }
+  }
+}
+
+body.has-logo {
+  #main-outlet {
+    padding-top: 0;
+  }
+}
+
 #list-area.tiles-style {
   .topic-header-grid {
     grid-area: photo !important;
