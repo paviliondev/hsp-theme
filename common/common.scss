@@ -192,8 +192,10 @@ body.has-logo {
       margin-bottom: 20px;
       
       .category-logo.aspect-image {
-        --max-height: 200px;
-        max-width: 300px;
+        height: 200px;
+        width: 300px;
+        max-width: initial;
+        max-height: initial;
         margin: 0;
       }
     }
