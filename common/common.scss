@@ -290,3 +290,15 @@ html.anon {
 body.categories-list .cta-block {
   display: none;
 }
+
+.category-search-container .search-header #search-term {
+    border-radius:8px;
+}
+
+.d-header button.login-button {
+    border-radius:8px;
+}
+
+.search-menu input[type="text"] {
+  border-radius:8px;
+}
