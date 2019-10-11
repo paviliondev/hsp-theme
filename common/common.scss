@@ -233,13 +233,19 @@ html.anon {
 .subtitle {
   text-align: center;
   width: 100%;
-  margin-top:10px;
+  margin-bottom: 30px;
 
   .subtext {
     width: 770px;
     display: inline-block;
     margin-top: 10px;
   }
+}
+
+html.anon {
+    .subtitle {
+        margin-bottom: 10px !important;
+    }
 }
 
 .signin {
