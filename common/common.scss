@@ -179,8 +179,6 @@ body.has-logo {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 20px 0;
-  margin-top: 30px;
   
   .homepage-category {
     width: 33%;
@@ -237,8 +235,9 @@ html.anon {
   width: 100%;
 
   .subtext {
-    width: 720px;
+    width: 770px;
     display: inline-block;
+    margin-top: 5px;
   }
 }
 
@@ -254,7 +253,7 @@ html.anon {
   margin-bottom: 20px;
 
   .subtext {
-    width: 720px;
+    width: 770px;
     display: inline-block;
   }
 
@@ -266,7 +265,7 @@ html.anon {
   margin-top: -20px;
 
   .subtext {
-    width: 720px;
+    width: 770px;
     display: inline-block;
   }
 }
