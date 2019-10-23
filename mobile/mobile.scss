@@ -58,6 +58,13 @@ ol.category-breadcrumb {
   }
 }
 
+html.anon {	
+  body.landing {	
+    .logo {	
+      margin-top: 55px;	
+    }	
+  }	
+}
 
 div.logo > p > a > img {
   max-width: 100%; 
@@ -65,9 +72,4 @@ div.logo > p > a > img {
   margin-bottom: -20px;
 }
 
-  body.landing {	
-    .logo {	
-      margin-top: 55px;	
-    }	
-  }	
-}
+
